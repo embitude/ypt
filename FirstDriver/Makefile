@@ -5,7 +5,7 @@ ifeq ($(KERNELRELEASE),)
 	PWD := $(shell pwd)
 
 default:
-	$(MAKE) -C $(KERNEL_SOURCE) SUBDIRS=$(PWD) modules CROSS_COMPILE=arm-poky-linux-gnueabi-
+	$(MAKE) -C $(KERNEL_SOURCE) SUBDIRS=$(PWD) modules ARCH=arm CROSS_COMPILE=arm-poky-linux-gnueabi-
 
 clean:
 	$(MAKE) -C $(KERNEL_SOURCE) SUBDIRS=$(PWD) clean
